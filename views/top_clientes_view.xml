@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_top_clientes_list" model="ir.ui.view">
+        <field name="name">top.clientes.list</field>
+        <field name="model">rpt.top_10_clientes</field>
+        <field name="arch" type="xml">
+            <list string="Top 10 clientes">
+                <header>
+                    <button name="print_report"
+                        type="object"
+                        string="Descargar PDF"
+                        class="btn-primary" />
+                </header>
+                <field name="id" />
+                <field name="nombre" />
+                <field name="apellido1" />
+                <field name="apellido2" />
+                <field name="email" />
+                <field name="telefono" />
+                <field name="pais" />
+                <field name="fecha_alta" />
+                <field name="total_gastado" />
+            </list>
+        </field>
+    </record>
+</odoo>

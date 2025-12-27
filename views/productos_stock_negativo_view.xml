@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Vista lista -->
+    <record id="view_productos_stock_negativo_list" model="ir.ui.view">
+        <field name="name">productos.stock.negativo.list</field>
+        <field name="model">rpt.productos_stock_negativo</field>
+        <field name="arch" type="xml">
+            <list string="Productos con Stock negativo">
+                <header>
+                    <button name="print_report"
+                        type="object"
+                        string="Descargar PDF"
+                        class="btn-primary" />
+                </header>
+                <field name="id" />
+                <field name="nombre" />
+                <field name="categoria" />
+                <field name="precio" />
+                <field name="stock" />
+                <field name="id_proveedor" />
+            </list>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_clientes_pedidos_abiertos,rpt.clientes_pedidos_abiertos,model_rpt_clientes_pedidos_abiertos,,1,0,0,0
+access_top_clientes,rpt.top_10_clientes,model_rpt_top_10_clientes,,1,0,0,0
+access_productos_stock_bajo,rpt.productos_stock_bajo,model_rpt_productos_stock_bajo,,1,0,0,0
+access_productos_stock_negativo,rpt.productos_stock_negativo,model_rpt_productos_stock_negativo,,1,0,0,0
+access_ventas_categoria,rpt.ventas_categoria,model_rpt_ventas_categoria,,1,0,0,0
+access_ventas_mes,rpt.ventas_mes,model_rpt_ventas_mes,,1,0,0,0
+access_pedidos_sin_lineas,rpt.pedidos_sin_lineas,model_rpt_pedidos_sin_lineas,,1,0,0,0
+access_facturas_vencidas,rpt.facturas_vencidas,model_rpt_facturas_vencidas,,1,0,0,0

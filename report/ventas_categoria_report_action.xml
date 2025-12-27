@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_ventas_categoria_report" model="ir.actions.report">
+        <field name="name">Productos más vendidos por Categoría</field>
+        <field name="model">rpt.ventas_categoria</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sge.ventas_categoria_report_template</field>
+        <field name="report_file">sge.ventas_categoria_report_template</field>
+        <field name="binding_model_id" ref="model_rpt_ventas_categoria" />
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ventas_mes_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Informe de los productos más vendidos por mes</h2>
+                        <div class="row">
+                            <div class="col -6">
+                                <p><strong>Nombre:</strong> <span t-field="doc.nombre"/></p>
+                                <p><strong>Mes:</strong> <span t-field="doc.mes"/></p>
+                            </div>
+                            <div class="col -6">
+                                <p><strong>Cantidad:</strong> <span t-field="doc.total_vendido"/></p>
+                                <p><strong>Precio total:</strong> <span t-field="doc.precio_total"/>€</p>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

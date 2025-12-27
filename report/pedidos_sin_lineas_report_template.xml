@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="pedidos_sin_lineas_report_template">
+        <t t-call="web.html_container">
+            <t t-if="docs">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h2>Informe de Pedidos sin líneas</h2>
+                            <div class="row">
+                                <div class="col -6">
+                                    <p><strong>ID:</strong> <span t-field="doc.id"/></p>
+                                    <p><strong>ID Cliente:</strong> <span t-field="doc.id_cliente"/></p>
+                                    <p><strong>Fecha:</strong> <span t-field="doc.fecha"/></p>
+                                    <p><strong>Estado:</strong> <span t-field="doc.estado"/></p>
+                                </div>
+                                <div class="col -6">
+                                    <p><strong>Importe base:</strong> <span t-field="doc.importe_base"/></p>
+                                    <p><strong>Descuento:</strong> <span t-field="doc.descuento"/></p>
+                                    <p><strong>IVA:</strong> <span t-field="doc.iva"/>€</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col -6">
+                                    <p><strong>Importe total:</strong> <span t-field="doc.importe_total"/></p>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+            <t t-else="">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Informe de Pedidos sin líneas</h2>
+                        <p>No hay pedidos sin líneas.</p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

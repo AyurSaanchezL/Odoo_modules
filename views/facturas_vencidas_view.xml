@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Vista lista -->
+    <record id="view_facturas_vencidas_list" model="ir.ui.view">
+        <field name="name">facturas.vencidas.list</field>
+        <field name="model">rpt.facturas_vencidas</field>
+        <field name="arch" type="xml">
+            <list string="Facturas vencidas">
+                <header>
+                    <button name="print_report"
+                        type="object"
+                        string="Descargar PDF"
+                        class="btn-primary" />
+                </header>
+                <field name="id" />
+                <field name="id_pedido" />
+                <field name="fecha_emision" />
+                <field name="fecha_vencimiento" />
+                <field name="estado_pago" />
+            </list>
+        </field>
+    </record>
+</odoo>

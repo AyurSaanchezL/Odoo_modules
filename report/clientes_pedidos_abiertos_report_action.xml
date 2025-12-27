@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_clientes_p_abiertos_report" model="ir.actions.report">
+        <field name="name">Clientes con pedidos abiertos</field>
+        <field name="model">rpt.clientes_pedidos_abiertos</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sge.clientes_pedidos_abiertos_report_template</field>
+        <field name="report_file">sge.clientes_pedidos_abiertos_report_template</field>
+        <field name="binding_model_id" ref="model_rpt_clientes_pedidos_abiertos" />
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

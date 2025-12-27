@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_ventas_mes_report" model="ir.actions.report">
+        <field name="name">Productos más vendidos por Mes</field>
+        <field name="model">rpt.ventas_mes</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sge.ventas_mes_report_template</field>
+        <field name="report_file">sge.ventas_mes_report_template</field>
+        <field name="binding_model_id" ref="model_rpt_ventas_mes" />
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

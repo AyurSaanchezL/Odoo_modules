@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_productos_stock_negativo_report" model="ir.actions.report">
+        <field name="name">Productos con Stock negativo</field>
+        <field name="model">rpt.productos_stock_negativo</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sge.productos_stock_negativo_report_template</field>
+        <field name="report_file">sge.productos_stock_negativo_report_template</field>
+        <field name="binding_model_id" ref="model_rpt_productos_stock_negativo" />
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

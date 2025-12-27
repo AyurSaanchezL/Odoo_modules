@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Vista lista -->
+    <record id="view_clientes_pedidos_abiertos_list" model="ir.ui.view">
+        <field name="name">clientes.pedidos.abiertos.list</field>
+        <field name="model">rpt.clientes_pedidos_abiertos</field>
+        <field name="arch" type="xml">
+            <list string="Clientes con Pedidos Abiertos">
+                <header>
+                    <button name="print_report"
+                        type="object"
+                        string="Descargar PDF"
+                        class="btn-primary" />
+                </header>
+                <field name="id" />
+                <field name="nombre" />
+                <field name="apellido1" />
+                <field name="apellido2" />
+                <field name="email" />
+                <field name="telefono" />
+                <field name="pais" />
+                <field name="fecha_alta" />
+                <field name="pedidos_abiertos" />
+            </list>
+        </field>
+    </record>
+</odoo>

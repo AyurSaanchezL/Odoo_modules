@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_ventas_categoria_list" model="ir.ui.view">
+        <field name="name">ventas.categoria.list</field>
+        <field name="model">rpt.ventas_categoria</field>
+        <field name="arch" type="xml">
+            <list string="Productos más vendidos por categoría">
+                <header>
+                    <button name="print_report"
+                        type="object"
+                        string="Descargar PDF"
+                        class="btn-primary" />
+                </header>
+                <field name="id" />
+                <field name="nombre" />
+                <field name="categoria" />
+                <field name="total_vendido" />
+                <field name="precio_total" />
+            </list>
+        </field>
+    </record>
+</odoo>

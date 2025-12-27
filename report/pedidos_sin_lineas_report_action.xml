@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_pedidos_sin_lineas_report" model="ir.actions.report">
+        <field name="name">Pedidos sin líneas</field>
+        <field name="model">rpt.pedidos_sin_lineas</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sge.pedidos_sin_lineas_report_template</field>
+        <field name="report_file">sge.pedidos_sin_lineas_report_template</field>
+        <field name="binding_model_id" ref="model_rpt_pedidos_sin_lineas" />
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

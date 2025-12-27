@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <!-- ANOMALIAS -->
+    <record id="action_productos_stock_negativo" model="ir.actions.act_window">
+        <field name="name">Productos con stock negativo</field>
+        <field name="res_model">rpt.productos_stock_negativo</field>
+        <field name="view_mode">list</field>
+    </record>
+    <record id="action_pedidos_sin_lineas" model="ir.actions.act_window">
+        <field name="name">Pedidos sin líneas</field>
+        <field name="res_model">rpt.pedidos_sin_lineas</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <!-- FACTURAS -->
+    <record id="action_facturas_vencidas" model="ir.actions.act_window">
+        <field name="name">Facturas vencidas</field>
+        <field name="res_model">rpt.facturas_vencidas</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <!-- VENTAS -->
+    <record id="action_ventas_categoria" model="ir.actions.act_window">
+        <field name="name">Productos más vendidos de cada categoría</field>
+        <field name="res_model">rpt.ventas_categoria</field>
+        <field name="view_mode">list</field>
+    </record>
+    <record id="action_ventas_mes" model="ir.actions.act_window">
+        <field name="name">Productos más vendidos por mes</field>
+        <field name="res_model">rpt.ventas_mes</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <!-- PRODUCTOS -->
+    <record id="action_productos_stock_bajo" model="ir.actions.act_window">
+        <field name="name">Productos con Stock bajo</field>
+        <field name="res_model">rpt.productos_stock_bajo</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <!-- CLIENTES -->
+    <record id="action_clientes_pedidos_abiertos" model="ir.actions.act_window">
+        <field name="name">Clientes con pedidos abiertos</field>
+        <field name="res_model">rpt.clientes_pedidos_abiertos</field>
+        <field name="view_mode">list</field>
+    </record>
+    <record id="action_top_clientes" model="ir.actions.act_window">
+        <field name="name">Top 10 clientes</field>
+        <field name="res_model">rpt.top_10_clientes</field>
+        <field name="view_mode">list</field>
+    </record>
+
+
+    <menuitem id="menu_informes_root"
+        name="Informes"
+        sequence="10" />
+
+    <!-- ANOMALÍAS -->
+    <menuitem id="menu_anomalias"
+        name="Anomalías"
+        parent="menu_informes_root"
+        sequence="50"
+    />
+
+    <menuitem id="productos_stock_negativo"
+        name="Stock negativo"
+        parent="menu_anomalias"
+        action="action_productos_stock_negativo"
+        sequence="10"
+    />
+    <menuitem id="pedidos_sin_lineas"
+        name="Pedidos sin líneas"
+        parent="menu_anomalias"
+        action="action_pedidos_sin_lineas"
+        sequence="20"
+    />
+
+    <!-- FACTURAS -->
+    <menuitem id="menu_facturas"
+        name="Facturas"
+        parent="menu_informes_root"
+        sequence="60"
+    />
+
+    <menuitem id="menu_facturas_vencidas"
+        name="Vencidas"
+        parent="menu_facturas"
+        action="action_facturas_vencidas"
+        sequence="10"
+    />
+
+    <!-- VENTAS -->
+    <menuitem id="menu_ventas"
+        name="Ventas"
+        parent="menu_informes_root"
+        sequence="40"
+    />
+
+    <menuitem id="menu_ventas_categoria"
+        name="Top productos categoría"
+        parent="menu_ventas"
+        action="action_ventas_categoria"
+        sequence="10"
+    />
+
+    <menuitem id="menu_ventas_mes"
+        name="Top productos mes"
+        parent="menu_ventas"
+        action="action_ventas_mes"
+        sequence="20"
+    />
+
+    <!-- PRODUCTOS -->
+
+    <menuitem id="menu_productos"
+        name="Productos"
+        parent="menu_informes_root"
+        sequence="30"
+    />
+
+    <menuitem id="productos_stock_bajo"
+        name="Stock &lt; 5"
+        parent="menu_productos"
+        action="action_productos_stock_bajo"
+        sequence="10"
+    />
+
+    <!-- CLIENTES -->
+
+    <menuitem id="menu_clientes"
+        name="Clientes"
+        parent="menu_informes_root"
+        sequence="20" />
+
+    <menuitem id="menu_clientes_pedidos_abiertos"
+        name="Clientes con pedidos abiertos"
+        parent="menu_clientes"
+        action="action_clientes_pedidos_abiertos"
+        sequence="10" />
+
+    <menuitem id="menu_top_clientes"
+        name="Top Clientes"
+        parent="menu_clientes"
+        action="action_top_clientes"
+        sequence="20" />
+</odoo>
